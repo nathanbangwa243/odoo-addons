@@ -1,0 +1,17 @@
+<odoo>
+
+    <!-- House Location action -->
+    <record id="house_location_action" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">house.location</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- House Location Type action -->
+    <record id="house_location_type_action" model="ir.actions.act_window">
+        <field name="name">House Type</field>
+        <field name="res_model">house.location.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
