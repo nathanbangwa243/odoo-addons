@@ -16,4 +16,7 @@
     'data': ['views/sale_order.xml'],
     'demo': ['demo/sale_demo.xml'],
     'installable': True,
+    
+    # adding app for search
+    'application': True, # Just for the search in odoo
 }

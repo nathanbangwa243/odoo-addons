@@ -26,4 +26,7 @@
     'post_init_hook': 'add_users_to_group_mrp_properties',
     'demo': ['demo/rental_demo.xml'],
     'installable': True,
+    
+    # adding app for search
+    'application': True, # Just for the search in odoo
 }

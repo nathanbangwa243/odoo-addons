@@ -18,4 +18,7 @@
     ],
     'demo': ['demo/product_demo.xml'],
     'installable': True,
+
+    # adding app for search
+    'application': True, # Just for the search in odoo
 }
