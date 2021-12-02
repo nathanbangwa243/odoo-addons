@@ -186,11 +186,6 @@ class HrSalaryRule(models.Model):
 
     #TODO should add some checks on the type of result (should be float)
     def _compute_rule(self, localdict):
-        """
-        :param localdict: dictionary containing the environement in which to compute the rule
-        :return: returns a tuple build as the base/amount computed, the quantity and the rate
-        :rtype: (float, float, float)
-        """
         self.ensure_one()
         if self.amount_select == 'fix':
             try:
@@ -212,10 +207,6 @@ class HrSalaryRule(models.Model):
                 raise UserError(_('Wrong python code defined for salary rule %s (%s).') % (self.name, self.code))
 
     def _satisfy_condition(self, localdict):
-        """
-        @param contract_id: id of hr.contract to be tested
-        @return: returns True if the given rule match the condition for the given contract. Return False otherwise.
-        """
         self.ensure_one()
 
         if self.condition_select == 'none':

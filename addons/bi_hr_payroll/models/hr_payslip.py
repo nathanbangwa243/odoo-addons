@@ -67,8 +67,7 @@ class HrPayslip(models.Model):
 
     def _compute_details_by_salary_rule_category(self):
         for payslip in self:
-            payslip.details_by_salary_rule_category = payslip.mapped('line_ids').filtered(lambda line: line.category_id)
-
+            payslip.details_by_salary_rule_category = payslip.mapped('line_ids').filtered(lambda line: line.category_id.id)
     def _compute_payslip_count(self):
         for payslip in self:
             payslip.payslip_count = len(payslip.line_ids)
@@ -132,12 +131,6 @@ class HrPayslip(models.Model):
     # TODO move this function into hr_contract module, on hr.employee object
     @api.model
     def get_contract(self, employee, date_from, date_to):
-        """
-        @param employee: recordset of employee
-        @param date_from: date field
-        @param date_to: date field
-        @return: returns the ids of all the contracts for the given employee that need to be considered for the given dates
-        """
         # a contract is valid if it ends between the given dates
         clause_1 = ['&', ('date_end', '<=', date_to), ('date_end', '>=', date_from)]
         # OR if it starts between the given dates
@@ -162,10 +155,6 @@ class HrPayslip(models.Model):
 
     @api.model
     def get_worked_day_lines(self, contracts, date_from, date_to):
-        """
-        @param contract: Browse record of contracts
-        @return: returns a list of dict containing the input that should be applied for the given contract between date_from and date_to
-        """
         res = []
         # fill only if the contract as a working schedule linked
         for contract in contracts.filtered(lambda contract: contract.resource_calendar_id):

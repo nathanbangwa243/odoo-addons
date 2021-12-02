@@ -3,8 +3,9 @@
 
 {
     'name': 'HR Payroll Community Edition',
-    "version" : "14.0.0.2",
+    "version" : "15.0.0.0",
     'category': 'Human Resources',
+    'license': 'OPL-1',
     'summary': 'Odoo HR Payroll Community Payroll Odoo13 payroll odoo14 payroll for community Odoo13 HR payroll Odoo14 HR payroll Human Resources payroll accounting odoo payslip salary slip employee payslip employee salaryslip HR payslip HR salaryslip odoo14 payslip odoo',
     'description' :"""
         

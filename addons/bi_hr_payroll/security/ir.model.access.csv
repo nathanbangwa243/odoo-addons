@@ -13,3 +13,4 @@ access_hr_salary_rule_user,hr.salary.rule.user,model_hr_salary_rule,bi_hr_payrol
 access_hr_contract_advantage_template,hr.contract.advantage.template.user,model_hr_contract_advantage_template,bi_hr_payroll.group_hr_payroll_user,1,1,1,1
 access_hr_contract_advantage_template_hr_user,hr.contract.advantage.template.hr.user,model_hr_contract_advantage_template,hr.group_hr_user,1,0,0,0
 access_hr_payslip_employees,access_hr_payslip_employees,model_hr_payslip_employees,base.group_user,1,1,1,1
+bi_hr_payroll.access_payslip_lines_contribution_register,access_payslip_lines_contribution_register,bi_hr_payroll.model_payslip_lines_contribution_register,base.group_user,1,1,1,0

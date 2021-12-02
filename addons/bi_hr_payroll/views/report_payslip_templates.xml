@@ -61,7 +61,6 @@
                                           t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
                                 <td><span t-esc="line.total"
                                           t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
-
                             </tr>
                         </tbody>
                     </table>
