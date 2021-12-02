@@ -43,6 +43,7 @@
     'demo': ['data/hr_payroll_demo.xml'],
     "auto_install": False,
     "installable": True,
+    "application": True, # juste for odoo search
     "live_test_url": 'https://youtu.be/XV14XB7nczA',
     "images":['static/description/Banner.png'],
 
